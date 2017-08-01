@@ -1,0 +1,36 @@
+{
+  "name": "jest_tests",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "./node_modules/jest/bin/jest.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/common/**",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "json-summary"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 1,
+        "functions": 1,
+        "lines": 1,
+        "statements": 1
+      }
+    }
+  },
+  "dependencies": {
+    "jest": "^20.0.4",
+    "jest-coverage-ratchet": "^0.2.3"
+  }
+}
