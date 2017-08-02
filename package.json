@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "./node_modules/.bin/jest",
-    "test:coverage": "yarn jest -- --coverage",
+    "test": "npm run jest",
+    "jest": "./node_modules/.bin/jest",
+    "test:coverage": "npm run jest -- --coverage",
     "ratchet": "./node_modules/.bin/jest-coverage-ratchet",
     "coverage:ratchet": "npm run test:coverage && npm run ratchet && npm test && rm -rf coverage"
   },
