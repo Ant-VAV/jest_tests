@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "npm run jest",
-    "jest": "./node_modules/.bin/jest",
+    "test": "./node_modules/.bin/jest",
+    "test-teamcity": "TEAMCITY_VERSION=1 npm test",
+    "test:up": "npm test && rm -rf coverage",
+    "jest": "./node_modules/.bin/jest && npm run ratchet",
     "test:coverage": "npm run jest -- --coverage",
     "ratchet": "./node_modules/.bin/jest-coverage-ratchet",
     "coverage:ratchet": "npm run test:coverage && npm run ratchet && npm test && rm -rf coverage"
@@ -12,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "jest": {
+    "testResultsProcessor": "jest-teamcity-reporter",
     "moduleFileExtensions": [
       "js",
       "json"
@@ -26,10 +29,8 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 1,
-        "functions": 1,
-        "lines": 1,
-        "statements": 1
+        "functions": 50,
+        "branches": 50
       }
     }
   },
