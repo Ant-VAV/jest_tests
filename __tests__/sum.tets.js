@@ -1,15 +1,17 @@
 'use strict';
 
-const sum = require('./../common/sum').sum;
+const { sum } = require('./../common/sum');
 
-test('red', () => {
-    expect(sum(1, 2)).toBe('red');
-});
+describe('Sum One', () => {
+    it('red', () => {
+        expect(sum(1, 2)).toBe('red');
+    });
 
-test('blue', () => {
-    expect(sum(-1, -2)).toBe('blue');
-});
+    // it('blue', () => {
+    //     expect(sum(-1, -2)).toBe('blue');
+    // });
 
-test('black', () => {
-    expect(sum(2, -2)).toBe('black');
+    it('black', () => {
+        expect(sum(2, -2)).toBe('black');
+    });
 });

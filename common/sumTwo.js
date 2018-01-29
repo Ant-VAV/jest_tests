@@ -1,16 +1,16 @@
 'use strict';
 
-function sum(a, b) {
+function sumTwo(a, b) {
     let result = a + b;
     if (result > 0) {
-        return 'red';
+        return 'awesome red';
     }
     // else if (result < 0) {
-    //     return 'blue'
+    //     return 'great blue'
     // }
-    return 'black';
+    return 'deep black';
 }
 
 module.exports = {
-    sum
+    sumTwo
 };

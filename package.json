@@ -25,6 +25,8 @@
       "!**/node_modules/**"
     ],
     "coverageReporters": [
+      "text",
+      "text-summary",
       "json-summary"
     ],
     "coverageThreshold": {
@@ -36,6 +38,7 @@
   },
   "dependencies": {
     "jest": "^20.0.4",
-    "jest-coverage-ratchet": "^0.2.3"
+    "jest-coverage-ratchet": "^0.2.3",
+    "jest-teamcity-reporter": "^0.9.0"
   }
 }
